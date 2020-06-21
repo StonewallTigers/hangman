@@ -21,7 +21,7 @@ GAME_STATE = NEW_GAME
 
 pygame.init()
 
-size = width, hight = 320 , 240
+size = width, hight = SCREEN_WIDTH , SCREEN_HIGHT
 pygame.display.set_mode(size)
 
 
