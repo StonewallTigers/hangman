@@ -2,8 +2,8 @@ import sys, pygame
 from wordpull import pullword
 
 ## global definitions and alias
-SCREEN_HIGHT = 320
-SCREEN_WIDTH = 240
+SCREEN_HEIGHT = 640
+SCREEN_WIDTH = 480
 
 NEW_GAME = 0
 RUNNING_GAME = 1
@@ -19,10 +19,11 @@ MEGA_HARD = (4,4,100)
 
 GAME_STATE = NEW_GAME
 
-pygame.init()
+pygame.display.init()
 
-size = width, hight = SCREEN_WIDTH , SCREEN_HIGHT
+size = width, hight = SCREEN_WIDTH , SCREEN_HEIGHT
 pygame.display.set_mode(size)
+pygame.display.set_caption("Hangman Game")##sets the caption above the window
 
 
 Board = []
