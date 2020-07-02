@@ -21,16 +21,26 @@ GAME_STATE = NEW_GAME
 
 pygame.display.init()
 
-size = width, hight = SCREEN_WIDTH , SCREEN_HEIGHT
-pygame.display.set_mode(size)
+size = width, height = SCREEN_WIDTH , SCREEN_HEIGHT
+screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Hangman Game")##sets the caption above the window
 
+blue_background = pygame.image.load('images&sprites/blue.png')##testing image loading
+icon = pygame.display.set_icon(blue_background)
 
-Board = []
-Life = 1
-while(GAME_STATE != QUIT):
-    if checkwin():
-        GAME_STATE = PLAYER_WIN
-    if checklose():
-        GAME_STATE = PLAYER_LOSS
+running = True
+while running:##main game loop
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running =false
+    screen.fill((140,0,65))##sets background, uses RGB
+    pygame.display.update()
+
+##Board = []
+##Life = 1
+##while(GAME_STATE != QUIT):
+##    if checkwin():
+##        GAME_STATE = PLAYER_WIN
+##    if checklose():
+##        GAME_STATE = PLAYER_LOSS
 
